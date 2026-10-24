@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signals and Systems MCQ Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">ENGINEERING • MCQ PRACTICE</p>
+      <h1>Signals and Systems Quiz</h1>
+      <p>Unit 3: Fourier Series & Fourier Transform · Unit 4: Laplace & Z-Transform</p>
+    </header>
+
+    <section class="toolbar">
+      <label for="unitFilter">Choose unit</label>
+      <select id="unitFilter">
+        <option value="all">All questions</option>
+        <option value="3">Unit 3 — Fourier</option>
+        <option value="4">Unit 4 — Laplace & Z-transform</option>
+      </select>
+      <button id="restartBtn" class="secondary">Restart Quiz</button>
+    </section>
+
+    <section id="quizPanel" class="card">
+      <div class="progress-row">
+        <span id="questionCounter">Question 1</span>
+        <span id="answeredCounter">Answered: 0</span>
+      </div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="unit-tag" id="unitTag"></div>
+      <h2 id="questionText"></h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div class="nav-row">
+        <button id="prevBtn" class="secondary">Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="submitBtn" class="submit hidden">Submit Quiz</button>
+      </div>
+    </section>
+
+    <section id="resultPanel" class="card hidden">
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <h2>Your Final Result</h2>
+      <div class="score-circle"><span id="scoreText">0/0</span><small>Score</small></div>
+      <p id="scoreMessage"></p>
+      <div class="result-stats">
+        <div><strong id="correctCount">0</strong><span>Correct</span></div>
+        <div><strong id="wrongCount">0</strong><span>Wrong</span></div>
+        <div><strong id="unansweredCount">0</strong><span>Unanswered</span></div>
+      </div>
+      <h3>Review answers</h3>
+      <div id="reviewList"></div>
+      <button id="tryAgainBtn">Try Again</button>
+    </section>
+    <footer>Choose one option for each question. Correct answers and explanations appear after submission.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
